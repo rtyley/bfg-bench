@@ -12,7 +12,7 @@ The BFG benchmark is written in Scala, build with SBT, and I've provided a compi
 Ram Disk
 --------
 
-You should set up a 2GB ram disk (eg tmpfs) and tell the BFG where it is with the `--scratch-dir` switch. The BFG defaults to using /dev/shm (a default tmpfs ram disk on Ubuntu). Each run of the BFG will start with a fresh copy of the repo, extracted to your scratch dir, replacing any previous repo.
+You should set up a 2GB ram disk (eg tmpfs) and tell the BFG where it is with the `--scratch-dir` switch. The BFG defaults to using `/dev/shm` (a default tmpfs ram disk on Ubuntu). Each run of the BFG will start with a fresh copy of the repo, extracted to your scratch dir, replacing any previous repo.
 
 Reference data
 --------------
@@ -21,14 +21,14 @@ The BFG is fast, so can only be really be tested with a large repo. I use a snap
 
 https://docs.google.com/uc?id=0B8R1d5Zpes8HUWUwVzZfUUlrdUU&export=download
 
-Once unzipped, the 'intellij' folder should live next to the 'github-gem' one, ie at:
+Once unzipped, the `intellij` folder should live next to the `github-gem` one, ie at:
 
 bfg-benchmark/resources/repos/intellij
 
 Then use the `--repos` switch to specify 'intellij':
 
 ```
-java -jar benchmark.jar --scratch-dir /tmp --versions with-jgit-v3.7.1,with-jgit-3abf35b-nio,with-jgit-05acf1c-io-fix --repos intellij --commands delete-file --only-bfg
+java -jar benchmark.jar --repos intellij --scratch-dir /tmp --versions with-jgit-v3.7.1,with-jgit-3abf35b-nio,with-jgit-05acf1c-io-fix --commands delete-file --only-bfg
 ```
 
 Example output
