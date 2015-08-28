@@ -17,7 +17,7 @@ You should set up a 2GB ram disk (eg tmpfs) and tell the BFG where it is with th
 BFG versions
 ------------
 
-BFG jars for test go under the `bfg-benchmark/resources/jars` folder, and can be specified with the `--versions` flag (remove the `bfg-` prefix and `.jar` suffix when you specify them).
+BFG jars for test go under the [`bfg-benchmark/resources/jars`](https://github.com/rtyley/bfg-bench/tree/master/bfg-benchmark/resources/jars) folder, and can be specified with the `--versions` flag (remove the `bfg-` prefix and `.jar` suffix when you specify them).
 
 Reference data
 --------------
