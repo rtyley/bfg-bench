@@ -3,7 +3,9 @@ Quick start
 
 From the top-level directory (adjacent to benchmark.jar), execute this command:
 
+```
 java -jar benchmark.jar --scratch-dir /tmp --versions with-jgit-v3.7.1,with-jgit-3abf35b-nio,with-jgit-05acf1c-io-fix --repos github_gem --commands delete-file --only-bfg
+```
 
 The BFG benchmark is written in Scala, build with SBT, and I've provided a compiled version for your convenience. The benchmark launches each BFG run in it's own process. The ouput is a bit messy, but you should be able to see how many milliseconds each run took.
 
@@ -30,13 +32,15 @@ bfg-benchmark/resources/repos/intellij
 
 Then use the `--repos` switch to specify 'intellij':
 
+```
 java -jar benchmark.jar --scratch-dir /tmp --versions with-jgit-v3.7.1,with-jgit-3abf35b-nio,with-jgit-05acf1c-io-fix --repos intellij --commands delete-file --only-bfg
-
+```
 
 Java versions
 -------------
 
 You can specify different Java versions with the `--java` switch. Otherwise the benchmark will just use `java` when launching the BFG jar.
 
+```
 --java /usr/lib/jvm/java-7-oracle/bin/java,/usr/lib/jvm/java-8-oracle/bin/java
-
+```
